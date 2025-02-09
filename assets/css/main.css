@@ -3123,6 +3123,13 @@ input, select, textarea {
 
 		}
 
+
+		.logo-icon {
+			width: 35px;
+			height: 35px;
+			vertical-align:middle
+		}
+
 /* Header */
 
 	#header {
@@ -3133,12 +3140,11 @@ input, select, textarea {
 			display: block;
 			border-bottom: 0;
 			color: inherit;
-			font-weight: 900;
+			font-weight:bold;
 			letter-spacing: 0em;
 			margin: 0 0 2.5em 0;
 			text-decoration: none;
-			text-transform:lowercase;
-			font-family: 'Space Grotesk', serif;
+			font-family: "Space Grotesk", serif;
 			font-size: 1.3rem;
 			display: inline-block;
 		}
