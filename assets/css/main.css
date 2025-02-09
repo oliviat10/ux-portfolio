@@ -364,6 +364,17 @@ input, select, textarea {
 	.case-study-h3 {
 		font-size: 1.8em;
 		font-weight: 500;
+		text-align: left;
+	}
+
+	.case-study-list {
+		text-align: left;
+		margin-bottom:0;
+	}
+
+	.case-study-content-list {
+		font-family: "Space Grotesk", serif;
+		margin-bottom: 2em;
 	}
 
 	.about-head {
@@ -581,7 +592,6 @@ input, select, textarea {
 
 	  .col-of-3 {
 		flex: 33%;
-		text-align:center
 	  }
 
 	  #rumii-prototype {
