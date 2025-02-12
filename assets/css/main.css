@@ -3427,6 +3427,18 @@ input, select, textarea {
 		right: 2.5rem;
 		display: flex;
 	}
+	@media screen and (max-width: 736px) {
+
+		.nav-bar {
+			flex-direction: column;
+			top: 3rem;
+		}
+		.nav-bar a{
+			margin-bottom: 0.5em;
+		}
+
+	}
+
 	
 	.nav-bar a {
 		margin-right: 3rem;
