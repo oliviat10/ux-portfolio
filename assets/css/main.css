@@ -2632,6 +2632,40 @@ input, select, textarea {
 		position: relative;
 	}
 
+	.stretch {
+		padding: 20px;
+	}
+
+	.existing-solutions-img {
+		width: 95%;
+	}
+
+	.persona {
+		width: 53em;
+	}
+
+	.wireframe {
+		width: 50em;
+	}
+
+	#login {
+		width: 45em;
+	}
+	#dashboard {
+		width: 35em;
+	}
+	#dashboard-2 {
+		width: 25em;
+	}
+	#calendar {
+		width: 55em;
+	}
+
+	.caption {
+		font-size: 0.8em;
+		padding-top: 0.5em;
+	}
+
 		.image img {
 			border-radius: 0px;
 			display: block;
@@ -2879,7 +2913,37 @@ input, select, textarea {
 
 /* Tiles */
 
-	.tiles {
+	.user-needs {
+		font-family: "Space Grotesk", serif;
+		text-align: center;
+		background-color:#fff1f4;
+		border-radius: 20px;
+		width: 100%;
+		left: 2em;
+		display: flex;
+		flex-direction: row;
+	}
+
+	@media screen and (max-width: 600px) {
+
+		.user-needs {
+			flex-direction: column;
+			margin: 0;
+		}
+		
+	}
+
+	#calendar-icon {
+		width: 75px;
+	}
+
+	.user-need-icon {
+		width: 85px;
+		height: 100px;
+		padding-bottom: 1em;
+	}
+
+	.tiles, .graphs, .user-needs {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -2888,11 +2952,29 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		postiion: relative;
+		position: relative;
 		margin: -2.5em 0 0 -2.5em;
 	}
 
-		.tiles article {
+	.user-needs article {
+		-moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+		-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+		-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+		transition: transform 0.5s ease, opacity 0.5s ease;
+		position: relative;
+		width: calc(33% - 2.5em);
+		margin: 2.5em 1.25em 0 1.25em;
+	}
+
+	@media screen and (max-width: 600px) {
+
+		.user-needs article {
+			width: calc(100% - 2.5em);
+		}
+		
+	}
+
+		.tiles article, .graphs article {
 			-moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
 			-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
 			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
@@ -2902,7 +2984,7 @@ input, select, textarea {
 			margin: 2.5em 0 0 2.5em;
 		}
 
-			.tiles article > .image {
+			.tiles article > .image, .graphs article > .image {
 				-moz-transition: -moz-transform 0.5s ease;
 				-webkit-transition: -webkit-transform 0.5s ease;
 				-ms-transition: -ms-transform 0.5s ease;
@@ -2914,7 +2996,7 @@ input, select, textarea {
 				overflow: hidden;
 			}
 
-				.tiles article > .image img {
+				.tiles article > .image img, .graphs article > .image img {
 					display: block;
 					width: 100%;
 				}
@@ -2956,6 +3038,7 @@ input, select, textarea {
 					opacity: 0.25;
 					z-index: 2;
 				}
+
 
 			.tiles article > a {
 				display: -moz-flex;
@@ -3058,6 +3141,7 @@ input, select, textarea {
 					background-color: #ffffff;
 					opacity: 0.90;
 				}
+
 
 				body:not(.is-touch) .tiles article:hover > .image:after {
 					opacity: 0;
@@ -3292,6 +3376,7 @@ input, select, textarea {
 		-ms-transition: opacity 0.45s ease;
 		transition: opacity 0.45s ease;
 		opacity: 1;
+		overflow-x:hidden;
 	}
 
 	.wrapper-2 {
