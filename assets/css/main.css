@@ -250,6 +250,17 @@ input, select, textarea {
 		.squeeze-textbox {
 			width: 75%;
 		}
+		@media screen and (max-width: 762px) {
+
+			.squeeze-textbox {
+				width: 95%;
+			}
+			.head {
+				padding-top: 2em;
+			}
+
+		}
+
 
 		.grain-blobs {
 			position:sticky;
