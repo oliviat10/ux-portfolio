@@ -3154,6 +3154,13 @@ input, select, textarea {
 					color: #0e0e0e !important;
 					opacity: 100%;
 				}
+				@media screen and (max-width: 480px) {
+					.tiles article > a:hover {
+						
+						opacity: 0%;
+					}
+			
+				}
 
 				.tiles article > a h2 {
 					margin: 0;
@@ -3174,14 +3181,6 @@ input, select, textarea {
 					.tiles article > a .content > :last-child {
 						margin-bottom: 0;
 					}
-
-					.tiles article > a:hover,
-.tiles article > a:focus,
-.tiles article > a:active {
-    background-color: rgba(255, 255, 255, 0.1); /* Adjust opacity as needed */
-	color: #0e0e0e !important;
-    opacity: 100%;
-}
 
 
 			/*
