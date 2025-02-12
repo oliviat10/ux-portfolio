@@ -3432,6 +3432,7 @@ input, select, textarea {
 		.nav-bar {
 			flex-direction: column;
 			top: 3rem;
+			right: 0em;
 		}
 		.nav-bar a{
 			margin-bottom: 0.5em;
