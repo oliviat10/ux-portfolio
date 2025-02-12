@@ -371,6 +371,14 @@ input, select, textarea {
 		width: 75%;
 		margin: auto;
 	}
+	@media screen and (max-width: 726px) {
+
+		.case-study {
+			width: 90%;
+		}
+
+	}
+	
 
 	.case-study-h3 {
 		font-size: 1.8em;
@@ -514,7 +522,7 @@ input, select, textarea {
 	@media screen and (max-width: 736px) {
 
 		h2 {
-			font-size: 2.5em;
+			font-size: 2em;
 		}
 		
 		h3 {
@@ -618,6 +626,17 @@ input, select, textarea {
 	  .three-col {
 		display:flex;
 	  }
+	  @media screen and (max-width: 726px) {
+
+		.three-col {
+			flex-direction: column;
+			
+		}
+		.col-of-3 {
+			margin-bottom: 1rem;
+		}
+
+	}
 
 	  .col-of-3 {
 		flex: 33%;
@@ -3155,6 +3174,15 @@ input, select, textarea {
 					.tiles article > a .content > :last-child {
 						margin-bottom: 0;
 					}
+
+					.tiles article > a:hover,
+.tiles article > a:focus,
+.tiles article > a:active {
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust opacity as needed */
+	color: #0e0e0e !important;
+    opacity: 100%;
+}
+
 
 			/*
 					.tiles article.style1 > .image:before {
