@@ -587,8 +587,21 @@ input, select, textarea {
 
 	  #col-2 {
 		flex: 45%;
-		margin-left: 3em;
+		margin-left: 4em;
 		margin-right: 0em;
+		text-align: right;
+	  }
+	  @media screen and (max-width: 762px) {
+
+		#col-2 {
+			margin-left: 0;
+		}
+
+	}
+
+
+	  .about-caption {
+		text-align: center;
 	  }
 
 	  .three-col {
@@ -617,7 +630,7 @@ input, select, textarea {
 
 	
 	  .about-photo {
-		width: 90%;
+		width: 100%;
 		
 	  }
 
@@ -3404,10 +3417,6 @@ input, select, textarea {
 		transition: opacity 0.45s ease;
 		opacity: 1;
 		overflow-x:hidden;
-	}
-
-	.wrapper-2 {
-		margin-left: 2em;
 	}
 
 	
