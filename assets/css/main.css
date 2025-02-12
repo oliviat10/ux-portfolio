@@ -367,6 +367,11 @@ input, select, textarea {
 		text-align: left;
 	}
 
+	.prototype, .competitors-section, .user-personas {
+		width: 100%;
+		text-align: center;
+	}
+
 	.case-study-list {
 		text-align: left;
 		margin-bottom:0;
@@ -595,8 +600,15 @@ input, select, textarea {
 	  }
 
 	  #rumii-prototype {
-		width: 100%;
+		width: 40em;
 	  }
+	  @media screen and (max-width: 1100px) {
+
+		#rumii-prototype {
+			width: 100%;
+		}
+
+	}
 
 	  .wireframes {
 		display: flex;
@@ -2184,11 +2196,11 @@ input, select, textarea {
 	ol {
 		list-style: decimal;
 		margin: 0 0 2em 0;
-		padding-left: 1.25em;
+		padding-left: 2.5em;
 	}
 
 		ol li {
-			padding-left: 0.25em;
+			padding-left: 0.5em;
 		}
 
 	ul {
@@ -2643,9 +2655,24 @@ input, select, textarea {
 	.persona {
 		width: 53em;
 	}
+	@media screen and (max-width: 1100px) {
+
+		.persona {
+			width: 100%;
+		}
+
+	}
+
 
 	.wireframe {
 		width: 50em;
+	}
+	@media screen and (max-width: 1100px) {
+
+		.wireframe {
+			width: 100% !important;
+		}
+
 	}
 
 	#login {
