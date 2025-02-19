@@ -3162,6 +3162,7 @@ input, select, textarea {
 			
 				}
 
+
 				.tiles article > a h2 {
 					margin: 0;
 				}
@@ -3208,16 +3209,44 @@ input, select, textarea {
 				background-color: #8499e7;
 			}*/
 
+			/* change back to 1.1 if I ever want zoom in*/
 			body:not(.is-touch) .tiles article:hover > .image {
 				-moz-transform: scale(1.1);
 				-webkit-transform: scale(1.1);
 				-ms-transform: scale(1.1);
 				transform: scale(1.1);
 			}
+			body:not(.is-touch) .tiles article > a {
+				display: scale(1.1);
+				display: scale(1.1);
+				display: scale(1.1);
+				color: #151515;
+				opacity:1;
+			}
+			@media screen and (max-width: 480px) {
+				body:not(.is-touch) .tiles article > a {
+					opacity: 0;
+				}
+				body:not(.is-touch) .tiles article:hover > .image {
+					-moz-transform: scale(1.0);
+				-webkit-transform: scale(1.0);
+				-ms-transform: scale(1.0);
+				transform: scale(1.0);
+				}
+				
+		
+			}
 
 				body:not(.is-touch) .tiles article:hover > .image:before {
 					background-color: #ffffff;
 					opacity: 0.90;
+				}
+				@media screen and (max-width: 480px) {
+					body:not(.is-touch) .tiles article:hover > .image:before {
+
+					background-color: none;
+					opacity:0;
+					}
 				}
 
 
