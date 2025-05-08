@@ -681,6 +681,7 @@ input, select, textarea {
 	
 	  .about-photo {
 		width: 100%;
+		box-shadow: 4px 4px 7px rgba(120, 120, 120, 0.5);
 		
 	  }
 
