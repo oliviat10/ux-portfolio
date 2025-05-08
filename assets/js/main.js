@@ -184,3 +184,44 @@
 			});
 
 })(jQuery);
+
+window.addEventListener('load', () => {
+    const faders = document.querySelectorAll('.fade-in-up');
+
+    const reveal = (el, delay) => {
+      setTimeout(() => {
+        el.classList.add('visible');
+      }, delay);
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      let delay = 0;
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          reveal(entry.target, delay);
+          delay += 150;
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+    });
+
+    // Wait until layout/render is complete
+    window.requestAnimationFrame(() => {
+      let loadDelay = 0;
+      faders.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight;
+        if (isVisible) {
+          reveal(el, loadDelay);
+          loadDelay += 150;
+        } else {
+          observer.observe(el);
+        }
+      });
+    });
+
+	
+
+  });

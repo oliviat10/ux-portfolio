@@ -59,6 +59,13 @@ ol, ul {
 	letter-spacing: 0.08em;
 }
 
+.outline-box {
+	border: solid 0.5px #c9c9c9;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	
+}
+
 blockquote, q {
 	quotes: none;
 }
@@ -294,6 +301,19 @@ input, select, textarea {
 			}
 
 		}
+
+		.fade-in-up {
+			opacity: 0;
+			transform: translateY(30px);
+			transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+			will-change: opacity, transform;
+		  }
+		  
+		  .fade-in-up.visible {
+			opacity: 1;
+			transform: translateY(0);
+		  }
+	  
 
 	a {
 		-moz-transition: border-bottom-color 0.2s ease, color 0.2s ease;
