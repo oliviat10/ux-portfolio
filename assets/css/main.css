@@ -561,6 +561,18 @@ p {
 
 .storyboard {
 	width: 100%;
+	text-align: center;
+}
+
+.storyboard-img {
+	width: 75%;
+}
+@media screen and (max-width: 726px) {
+
+	.storyboard-img {
+		width: 100%;
+	}
+
 }
 
 .workshop-photos {
@@ -572,13 +584,36 @@ p {
 	width: 48%;
 }
 
-.gif {
-	width: 100%;
+.figma {
+	text-align: center;
+}
+
+.gif-tour {
+	width: 75%;
+	height: 75%;
+}
+@media screen and (max-width: 726px) {
+
+	.gif-tour {
+		width: 100%;
+		height: 100%;
+	}
+
 }
 
 .file-viewer-img {
-	width: 60%;
+	width: 75%;
+	border: solid 1px #bfbfbf;
+
 }
+@media screen and (max-width: 726px) {
+
+	.file-viewer-img {
+		width: 100%;
+	}
+
+}
+
 
 #download {
 	border: solid 1px #c9c9c9;
@@ -588,11 +623,6 @@ mark {
 	background-color: #ffdfeb;
 }
 
-.figma {
-	width: 70vw;
-	height: 45vw;
-	display: flex;
-}
 
 .case-study {
 	text-align: left;
@@ -652,6 +682,17 @@ mark {
 	margin-bottom: 3rem;
 }
 
+.bridges-hifi {
+	width: 100%;
+}
+@media screen and (max-width: 726px) {
+
+	.bridges-hifi {
+		
+	}
+
+}
+
 #rumii-header {
 	background-image: url("/images/rumii/rumii-proj-cover.png");
 }
@@ -665,7 +706,7 @@ mark {
 }
 
 #bridges-header {
-	background-image: url("/images/bridges/bridges-proj-cover.png");
+	background-image: url("/images/bridges/bridges-proj-cover1.png");
 }
 
 h1 {
