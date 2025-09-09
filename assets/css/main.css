@@ -709,6 +709,18 @@ mark {
 	background-image: url("/images/bridges/bridges-proj-cover1.png");
 }
 
+#pillar-apps-header {
+	background-image: url("/images/pillar/pillar-proj-cover.png");
+}
+
+#reu-header {
+	background-image: url("/images/reu/reu-proj-cover.png");
+}
+
+#warmbot-header {
+	background-image: url("/images/warmbot/warmbot-proj-cover.png");
+}
+
 h1 {
 	font-size: 2.5em;
 	font-weight: 600;
@@ -2977,6 +2989,10 @@ input[type="radio"]+label:before {
 	border: solid 1px #010203;
 	display: inline-block;
 	position: relative;
+}
+
+.map, .poster {
+	width: 100%;
 }
 
 .stretch {
