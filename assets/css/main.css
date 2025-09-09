@@ -687,6 +687,9 @@ mark {
 		height:185px;
 
 	}
+	#pillar-apps-header, #reu-header {
+		height: 150px;
+	}
 
 }
 
