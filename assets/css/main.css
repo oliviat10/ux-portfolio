@@ -681,6 +681,14 @@ mark {
 	height: 385px;
 	margin-bottom: 3rem;
 }
+@media screen and (max-width: 726px) {
+
+	.project-header {
+		height:185px;
+
+	}
+
+}
 
 .bridges-hifi {
 	width: 100%;
