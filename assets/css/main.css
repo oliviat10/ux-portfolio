@@ -3006,80 +3006,81 @@ input[type="radio"]+label:before {
 	position: relative;
 }
 
+/* ===== Container ===== */
 .card-container {
+  position: relative;              /* anchor absolute children */
   display: flex;
   align-items: center;
   justify-content: center;
   height: 70vh;
   transform-style: preserve-3d;
 }
+
 @media screen and (max-width: 1100px) {
-	.card-container {
-			height: 50vh;
-		}
+  .card-container { height: 50vh; }
 }
 
+/* ===== Cards (auto mode defaults) ===== */
 .card {
   position: absolute;
-  /*width: 800px;
-  height: 580px;*/
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  animation: rotateCard 10.5s ease-in-out infinite;
   background-repeat: no-repeat;
   background-position: center;
-  background-size:contain;
+  background-size: contain;
   filter: drop-shadow(2px 2px 2px #b0b0b0);
-}
-@media screen and (max-width: 1100px) {
-	.card {
-			width: 95%;
-			
-		}
+  animation: rotateCard 10.5s ease-in-out infinite;
+  transition: transform 400ms ease, z-index 0s step-end;
+  cursor: default;                 /* default while auto-rotating */
 }
 
+@media screen and (max-width: 1100px) {
+  .card { width: 95%; }
+}
+
+/* ===== Keyframes (matches manual poses) ===== */
 @keyframes rotateCard {
   /* Hold front */
-  0% {
-    transform: translateZ(1px);
-  }
-  /* Hold front */
-  28.57% {
-    transform: translateZ(1px);
-  }
-  /* Move left */
-  33.33% {
-    transform: rotate(-4deg) scale(0.9) translate(-15%, -5%);
-  }
-  /* Hold left */
-  61.90% {
-    transform: rotate(-4deg) scale(0.9) translate(-15%, -5%);
-  }
-  /* Move right */
-  66.67% {
-    transform: rotate(4deg) scale(0.9) translate(15%, -5%);
-  }
-  /* Hold right */
-  95.23% {
-    transform: rotate(4deg) scale(0.9) translate(15%, -5%);
-  }
-  /* Move front */
-  100% {
-    transform: translateZ(1px);
-  }
+  0% { transform: translateZ(1px); }
+  28.57% { transform: translateZ(1px); }
+
+  /* Left pose */
+  33.33% { transform: rotate(-4deg) scale(0.9) translate(-15%, -5%); }
+  61.90% { transform: rotate(-4deg) scale(0.9) translate(-15%, -5%); }
+
+  /* Right pose */
+  66.67% { transform: rotate(4deg) scale(0.9) translate(15%, -5%); }
+  95.23% { transform: rotate(4deg) scale(0.9) translate(15%, -5%); }
+
+  /* Back to front */
+  100% { transform: translateZ(1px); }
 }
 
-.card:nth-child(1) {
-  animation-delay: -7s;
+/* Staggered start times to cycle the stack */
+.card:nth-child(1) { animation-delay: -7s; }
+.card:nth-child(2) { animation-delay: -3.5s; }
+/* Starts at front */
+.card:nth-child(3) { animation-delay: 0; }
+
+/* ===== Manual mode (entered after first user click) ===== */
+.card-container.manual-mode .card {
+  animation: none !important;      /* stop auto flip */
+  cursor: pointer;                 /* indicate interactivity */
+  pointer-events: none;            /* prevent front from blocking */
 }
-.card:nth-child(2) {
-  animation-delay: -3.5s;
+
+/* Only side cards are clickable in manual mode */
+.card-container.manual-mode .card.left,
+.card-container.manual-mode .card.right {
+  pointer-events: auto;
 }
-/* This one is naturally at the front so we'll start with it */
-.card:nth-child(3) {
-  animation-delay: 0;
-}
+
+/* ===== Manual poses (mirror the keyframes exactly) ===== */
+.card.front  { transform: translateZ(1px);                                   z-index: 3; }
+.card.left   { transform: rotate(-4deg) scale(0.9) translate(-15%, -5%);     z-index: 2; }
+.card.right  { transform: rotate(4deg)  scale(0.9) translate(15%, -5%);      z-index: 2; }
+
 
 
 
