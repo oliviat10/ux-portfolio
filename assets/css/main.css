@@ -3002,6 +3002,85 @@ input[type="radio"]+label:before {
 	position: relative;
 }
 
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  transform-style: preserve-3d;
+}
+@media screen and (max-width: 1100px) {
+	.card-container {
+			height: 50vh;
+		}
+}
+
+.card {
+  position: absolute;
+  /*width: 800px;
+  height: 580px;*/
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  animation: rotateCard 10.5s ease-in-out infinite;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:contain;
+  filter: drop-shadow(2px 2px 2px #b0b0b0);
+}
+@media screen and (max-width: 1100px) {
+	.card {
+			width: 95%;
+			
+		}
+}
+
+@keyframes rotateCard {
+  /* Hold front */
+  0% {
+    transform: translateZ(1px);
+  }
+  /* Hold front */
+  28.57% {
+    transform: translateZ(1px);
+  }
+  /* Move left */
+  33.33% {
+    transform: rotate(-4deg) scale(0.9) translate(-15%, -5%);
+  }
+  /* Hold left */
+  61.90% {
+    transform: rotate(-4deg) scale(0.9) translate(-15%, -5%);
+  }
+  /* Move right */
+  66.67% {
+    transform: rotate(4deg) scale(0.9) translate(15%, -5%);
+  }
+  /* Hold right */
+  95.23% {
+    transform: rotate(4deg) scale(0.9) translate(15%, -5%);
+  }
+  /* Move front */
+  100% {
+    transform: translateZ(1px);
+  }
+}
+
+.card:nth-child(1) {
+  animation-delay: -7s;
+}
+.card:nth-child(2) {
+  animation-delay: -3.5s;
+}
+/* This one is naturally at the front so we'll start with it */
+.card:nth-child(3) {
+  animation-delay: 0;
+}
+
+
+
+
+
 .map, .poster {
 	width: 100%;
 }
@@ -3779,7 +3858,7 @@ body.is-touch .tiles article .content {
 }
 
 #header nav ul li a[href="#menu"]:before {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 8px%3B stroke: %23f2849e%3B %7D%3C/style%3E%3Cline x1='0' y1='25' x2='100' y2='25' /%3E%3Cline x1='0' y1='50' x2='100' y2='50' /%3E%3Cline x1='0' y1='75' x2='100' y2='75' /%3E%3C/svg%3E");
+	background-image: ("data:image/svg+xmurll;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 8px%3B stroke: %23f2849e%3B %7D%3C/style%3E%3Cline x1='0' y1='25' x2='100' y2='25' /%3E%3Cline x1='0' y1='50' x2='100' y2='50' /%3E%3Cline x1='0' y1='75' x2='100' y2='75' /%3E%3C/svg%3E");
 	opacity: 0;
 }
 
