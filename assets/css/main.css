@@ -3032,7 +3032,7 @@ input[type="radio"]+label:before {
   filter: drop-shadow(2px 2px 2px #b0b0b0);
   animation: rotateCard 10.5s ease-in-out infinite;
   transition: transform 400ms ease, z-index 0s step-end;
-  cursor: default;                 /* default while auto-rotating */
+  cursor: pointer;                 /* default while auto-rotating */
 }
 
 @media screen and (max-width: 1100px) {
