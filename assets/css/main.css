@@ -506,6 +506,8 @@ textarea {
 
 }
 
+
+
 .fade-in-up {
 	opacity: 0;
 	transform: translateY(30px);
@@ -671,6 +673,7 @@ mark {
 	font-weight: 600;
 }
 
+
 .project-header {
 	padding-top: 2.5rem;
 	padding-bottom: 4.8125rem;
@@ -680,6 +683,7 @@ mark {
 	background-position: center;
 	height: 385px;
 	margin-bottom: 3rem;
+	
 }
 @media screen and (max-width: 726px) {
 
