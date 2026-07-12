@@ -506,7 +506,13 @@ textarea {
 
 }
 
+.about-text {
+	margin-bottom:25px;
+}
 
+.about-intro {
+	margin-bottom: 30px;
+}
 
 .fade-in-up {
 	opacity: 0;
