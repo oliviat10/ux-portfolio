@@ -3687,7 +3687,7 @@ body:not(.is-touch) .tiles article:hover .content {
 }
 
 *+.tiles {
-	margin-top: 2em;
+	margin-top: -1em;
 }
 
 body.is-preload .tiles article {
@@ -3768,7 +3768,7 @@ body.is-touch .tiles article .content {
 /* Header */
 
 #header {
-	padding: 4em 0 0.1em 0;
+	padding: 3.25em 0 0.1em 0;
 }
 
 #header .logo {
