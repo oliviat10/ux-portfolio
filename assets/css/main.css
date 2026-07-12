@@ -673,6 +673,13 @@ mark {
 .about-head {
 	margin-bottom: 0.5em;
 }
+@media screen and (max-width: 726px) {
+
+	.about-head {
+		margin-top: 1.26em;
+	}
+
+}
 
 .case-study-head {
 	margin-bottom: 0.4em;
@@ -3966,6 +3973,7 @@ body.is-touch .tiles article .content {
 	border-radius: 2px;
 	width: auto;
 	text-align: center;
+	margin-bottom: 2.05rem;
 }
 
 .ds-email-me {
@@ -3981,6 +3989,7 @@ body.is-touch .tiles article .content {
 	border-radius: 2px;
 	width: auto;
 	text-align: center;
+	margin-bottom: 2.05rem;
 }
 
 .ds-download-button i {
